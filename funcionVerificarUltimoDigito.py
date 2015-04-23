@@ -1,6 +1,5 @@
 #Esta funcion aparentemente sirve para verificar que el ultimo digito del RIF es el correcto o no lo es
 
-
 def calculoUltimoDigitoRif(RIF):
 	lista = RIF.split('-')
 	#posicion 0  Letra - pos 1 num_intermedio- pos 3 numero final
@@ -57,16 +56,18 @@ def calculoUltimoDigitoRif(RIF):
 		retorno = 0
 
 	print RIF
-	print 'ultimo valor calculado',retorno
+	print 'valor calculado',retorno
 	print 'valor introducido', lista[2]
 
-	if(retorno!=lista[2]):
+	numero_final = int(lista[2])
+
+	if(retorno!=numero_final):
 		print 'el valor introducido es falso'
 		return False
 	else:
-		print 'el valor introducido es vedadero'
+		print 'el valor introducido es verdadero'
 		return True
 	
 
-RIF = 'V-4634350-8'
+RIF = 'V-18545601-0'
 print calculoUltimoDigitoRif(RIF)
